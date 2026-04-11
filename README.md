@@ -32,7 +32,7 @@ Ce projet implémente un **système dual d'analyse ECG par intelligence artifici
 | **Biométrie** | Identifier un patient par son signal ECG | BiometricNet CNN |
 | **AI Agent** | Générer rapports médecin + patient en PDF | Gemini 2.5 Flash |
 
-**Contexte** : Ce projet démontre des compétences en IA médicale appliquée, directement alignées avec la mission d'**applicare.ai** — *"Empowering healthcare professionals with continuous physiological data and AI-driven predictive analytics."*
+**Contexte** : Ce projet démontre des compétences en IA médicale appliquée.
 
 > 📌 **Datasets utilisés** :
 > - MIT-BIH Arrhythmia Database (Kaggle — `shayanfazeli/heartbeat`) pour la classification
