@@ -7,7 +7,7 @@ J'ai développé un système ECG dual : un classificateur d'arythmies en temps r
 
 ---
 
-## 📋 Table des Matières
+##  Table des Matières
 
 1. [Vue d'ensemble](#vue-densemble)
 2. [Résultats Clés](#résultats-clés)
@@ -22,7 +22,7 @@ J'ai développé un système ECG dual : un classificateur d'arythmies en temps r
 
 ---
 
-## 🎯 Vue d'ensemble
+##  Vue d'ensemble
 
 Ce projet implémente un **système dual d'analyse ECG par intelligence artificielle**, composé de deux modules de Deep Learning et d'un agent IA génératif :
 
@@ -34,7 +34,7 @@ Ce projet implémente un **système dual d'analyse ECG par intelligence artifici
 
 **Contexte** : Ce projet démontre des compétences en IA médicale appliquée.
 
-> 📌 **Datasets utilisés** :
+>  **Datasets utilisés** :
 > - MIT-BIH Arrhythmia Database (Kaggle — `shayanfazeli/heartbeat`) pour la classification
 > - MIT-BIH PhysioNet (via `wfdb`) pour la biométrie — 47 vrais patients
 
@@ -42,7 +42,7 @@ Ce projet implémente un **système dual d'analyse ECG par intelligence artifici
 
 ---
 
-## 🏆 Résultats Clés
+##  Résultats Clés
 
 ### Projet 1 — Classification des Arythmies
 
@@ -67,7 +67,6 @@ Ce projet implémente un **système dual d'analyse ECG par intelligence artifici
 
 
 
-> 🩺 **Point critique médical** : Arythmie Ventriculaire (potentiellement mortelle) — taux d'urgences ratées : **3.6%**, bien sous le seuil critique clinique de 15%.
 
 ### Projet 2 — Identification Biométrique ECG
 
@@ -78,7 +77,7 @@ Ce projet implémente un **système dual d'analyse ECG par intelligence artifici
 | Précision (macro) | 0.9284 |
 | Rappel (macro) | 0.9228 |
 | F1-Score (macro) | 0.9222 |
-| **Verdict** | 🏆 **EXCELLENT** |
+| **Verdict** |  **EXCELLENT** |
 <img width="471" height="190" alt="image" src="https://github.com/user-attachments/assets/021643cc-c2f2-4b8b-b1fb-6a4220203f42" />
 <img width="1414" height="591" alt="image" src="https://github.com/user-attachments/assets/0b79d4b5-02e5-4f67-9ad2-a1c4c162b9cb" />
 <img width="1491" height="464" alt="image" src="https://github.com/user-attachments/assets/c20781a3-dda5-4df1-993f-48f49b429768" />
@@ -87,7 +86,7 @@ Ce projet implémente un **système dual d'analyse ECG par intelligence artifici
 
 ---
 
-## 🏗️ Architecture du Système
+##  Architecture du Système
 
 ```
 ECG Intelligence Platform
@@ -129,27 +128,24 @@ Sans correction → le modèle CNN basique prédit **tout comme "Normal"** → *
 
 ### Pipeline de Résolution
 
-**Étape 1 — Démonstration ACP** (justification du CNN non-linéaire)
-- Variance expliquée par 2 composantes : **52.19%**
-- Les classes se chevauchent → méthodes linéaires insuffisantes → choix du CNN validé
-<img width="886" height="517" alt="image" src="https://github.com/user-attachments/assets/052783ce-e50d-4081-850a-c6c9c75a5b51" />
 
 
-**Étape 2 — Undersampling**
+
+**Étape 1 — Undersampling**
 - Classe Normal réduite de 72,471 → 10,000 échantillons
   <img width="879" height="115" alt="image" src="https://github.com/user-attachments/assets/08309a10-f5d0-43a4-b1be-c71de25531cb" />
 
 
-**Étape 3 — SMOTE**
+**Étape 2 — SMOTE**
 - Classes minoritaires augmentées synthétiquement → 10,000 chacune
 
-**Étape 4 — Focal Loss**
+**Étape 3 — Focal Loss**
 ```python
 # Pénalise plus les erreurs sur les classes rares
 focal_loss(gamma=2.0, alpha=0.25)
 ```
 
-**Étape 5 — Optimisation des seuils de décision**
+**Étape 4 — Optimisation des seuils de décision**
 ```python
 # Grid search sur 50 seuils entre 0.1 et 0.9 par classe
 # Optimisation du F1-Score par classe
@@ -188,7 +184,7 @@ Input (187, 1)
 
 ---
 
-## 🔐 Projet 2 — Identification Biométrique ECG
+##  Projet 2 — Identification Biométrique ECG
 
 ### Concept
 
@@ -296,7 +292,7 @@ Rapport Médecin   Rapport Patient
 
 ### Clause Éthique Systématique
 
-> *"⚠️ Ce rapport est généré automatiquement par un système IA.  
+> *" Ce rapport est généré automatiquement par un système IA.  
 > Il constitue une aide à la décision et ne remplace pas le jugement  
 > d'un professionnel de santé qualifié."*
 
@@ -314,7 +310,7 @@ Rapport Médecin   Rapport Patient
 
 ---
 
-## 📦 Installation & Utilisation
+##  Installation & Utilisation
 
 ### Environnement
 
@@ -329,7 +325,7 @@ Rapport Médecin   Rapport Patient
 
 ```python
 # 1. Clé Gemini dans les Secrets Colab
-#    🔑 Panneau gauche → Secrets → GEMINI_API_KEY → votre_clé
+#     Panneau gauche → Secrets → GEMINI_API_KEY → votre_clé
 
 # 2. Dataset MIT-BIH depuis Kaggle
 !kaggle datasets download -d shayanfazeli/heartbeat
@@ -360,7 +356,7 @@ outputs/
 ---
 
 
-## 📚 Références
+##  Références
 
 - Moody G.B., Mark R.G. (2001). *The impact of the MIT-BIH Arrhythmia Database.* IEEE Engineering in Medicine and Biology, 20(3):45-50.
 - Goldberger A., et al. (2000). *PhysioBank, PhysioToolkit, and PhysioNet.* Circulation, 101(23).
@@ -370,7 +366,7 @@ outputs/
 
 ---
 
-## 👩‍💻 Auteure
+##  Auteure
 
 **Ouertani Mariem Étudiante Ingénieure — Network & Telecommunications**  
 Spécialisation : AI · ML · Deep Learning · Signal Processing · Data Analytics
